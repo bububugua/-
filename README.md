@@ -1,6 +1,4 @@
 //一个C语言做的（漏洞百出的）扫雷
-
-#pragma once
 #include<stdio.h>
 #include<stdlib.h>  //这个是清屏函数所属函数库
 #include<time.h>    //这个函数库有产生时间戳的函数，产生随机数用
@@ -21,7 +19,6 @@ int dianji(char a[heng][shu], char b[heng][shu], char c[heng][shu], int i, int j
 //点击图上的方块（当然是通过写坐标）
 void baozha(char a[heng][shu], char b[heng][shu]);//点到雷了，爆炸了
 int shengli(char a[heng][shu], char b[heng][shu], int m);//胜利！！
-
 
 void denglu()
 {
