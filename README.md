@@ -1,4 +1,5 @@
-# //一个C语言做的（漏洞百出的）扫雷
+//一个C语言做的（漏洞百出的）扫雷
+
 #pragma once
 #include<stdio.h>
 #include<stdlib.h>  //这个是清屏函数所属函数库
@@ -22,9 +23,9 @@ void baozha(char a[heng][shu], char b[heng][shu]);//点到雷了，爆炸了
 int shengli(char a[heng][shu], char b[heng][shu], int m);//胜利！！
 
 
-
 void denglu()
 {
+
     printf("\n\n\t\t欢迎进入扫雷，请选择\n\n");
     printf("\t\t1.开始游戏\n\n");
     printf("\t\t2.退出游戏\n\n\t\t");
@@ -32,6 +33,7 @@ void denglu()
 
 void game()
 {
+
     char a[heng][shu] = { 0 }, b[heng][shu] = { 0 }, c[heng][shu] = { 0 };
     int i, j, l;
     int s = 1, m = 0;//用于判断操作行为
@@ -39,6 +41,7 @@ void game()
     chushihua(b);
     while (g)
     {
+    
         system("cls"); //每次选择完刷新页面
         dayin(b);
         printf("\n\n\t你可以选择一个坐标：");
@@ -61,6 +64,7 @@ void game()
                 break;
             }
         }
+        
         s = 1;
         if (shengli(a, b, m) == 1)
             break;
@@ -74,9 +78,11 @@ void game()
 
 int main()
 {
+
     int a = 0, b, c;
     while (1)
     {
+    
         denglu();
         while (a != 2)
         {
@@ -97,6 +103,7 @@ int main()
             }
             if (c == 0)
                 break;
+                
         }
         printf("\n\t1 是\t2 否");
         printf("\n\t是否要重新玩一局？");
@@ -105,7 +112,7 @@ int main()
         if (b == 2 || a == 2)
             break;
     }
-
+    
     system("cls");
     printf("\n\n\t\t感谢游玩，我们下次再见！！\n\n");
     return 0;
